@@ -1,14 +1,15 @@
-var player1 = "p1";
-var player2 = "p2";
-var currPlayer = player1;
 
+
+var playerRed = "R";
+var playerYellow = "Y";
+var currPlayer = playerRed;
 
 var gameOver = false;
 var board;
 
 var rows = 6;
-var columns = 5;
-var currColumns = [];
+var columns = 7;
+var currColumns = []; //keeps track of which row each column is at.
 
 window.onload = function() {
     setGame();
@@ -16,7 +17,7 @@ window.onload = function() {
 
 function setGame() {
     board = [];
-    currColumns = [5, 5, 5, 5, 5];
+    currColumns = [5, 5, 5, 5, 5, 5, 5];
 
     for (let r = 0; r < rows; r++) {
         let row = [];
@@ -32,7 +33,9 @@ function setGame() {
         }
         board.push(row);
     }
-}function setPiece() {
+}
+
+function setPiece() {
     if (gameOver) {
         return;
     }
@@ -51,13 +54,13 @@ function setGame() {
 
     board[r][c] = currPlayer; //update JS board
     let tile = document.getElementById(r.toString() + "-" + c.toString());
-    if (currPlayer == player1) {
+    if (currPlayer == playerRed) {
         tile.classList.add("red-piece");
-        currPlayer = player2;
+        currPlayer = playerYellow;
     }
     else {
         tile.classList.add("yellow-piece");
-        currPlayer = player1;
+        currPlayer = playerRed;
     }
 
     r -= 1; //update the row height for that column
@@ -118,14 +121,10 @@ function checkWinner() {
 
 function setWinner(r, c) {
     let winner = document.getElementById("winner");
-    if (board[r][c] == player1) {
-        winner.innerText = "p1 Wins";
-                
+    if (board[r][c] == playerRed) {
+        winner.innerText = "Red Wins";             
     } else {
-        winner.innerText = "p2 Wins";
-       
+        winner.innerText = "Yellow Wins";
     }
     gameOver = true;
 }
-
-

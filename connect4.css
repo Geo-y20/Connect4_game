@@ -4,15 +4,16 @@ body {
 }
 
 #board {
-    height: 550px;
-    width: 450px;
+    height: 540px;
+    width: 630px;
     background-color: blue;
-    border: 5px solid navy;
+    border: 10px solid navy;
     
-    margin:0 auto;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
+
 .tile {
     height: 70px;
     width: 70px;
