@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Connect 4 Game</title>
+    <title>Connect 4 Game</title>
   <link rel="stylesheet" type="text/css" href="connect4.css">
 </head>
 <body>
