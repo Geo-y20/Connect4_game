@@ -19,18 +19,6 @@ This project is a web-based implementation of the classic game Connect 4.
 
 To run the game, simply open the "index.html" file in your web browser.
 
-## Customization
 
-If you want to customize the game, you can modify the CSS styles in the "connect4.css" file to change the colors, fonts, or layout.
-
-## Contributing
-
-If you'd like to contribute to this project, feel free to fork the repository and submit a pull request with your changes.
-
-## Acknowledgments
-
-Special thanks to the creators of the original Connect 4 game for the inspiration.
-
----
 
 Created by George Youhana
